@@ -1,5 +1,5 @@
-module GetGuess
-  def get_guess
+module UserGuess
+  def user_guess
     guess_valid = false
     while guess_valid == false
      puts "\nPlease enter the letter you wish to guess."
@@ -21,8 +21,22 @@ module GetGuess
       puts guess_word.join
     else
       self.wrong_guesses += 1
-      p wrong_guesses
-      puts "\nSorry, the hidden word does not include letter #{guess}!"
+      p self.wrong_guesses
+      case wrong_guesses
+      when 1
+        hangman[0] = "O"
+      when 2
+        hangman[1] = "|"
+      when 3
+        hangman[2] = "/"
+      when 4
+        hangman[3] = "\\"
+      when 5
+        hangman[4] = "/"
+      when 6
+        hangman[5] = "\\"
+      end
+      puts "\nSorry, the hidden word does not include the letter #{guess}!"
     end
     show_board
   end

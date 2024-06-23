@@ -12,8 +12,8 @@ require_relative "main/game"
 # hidden_word = dictionary[rand(1..10000)]
 
 test = Game.new
-
-test.get_guess
+ 
+test.user_guess
 
 # board = "\
 # \n +---+\

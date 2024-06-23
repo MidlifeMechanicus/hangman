@@ -1,10 +1,10 @@
 require_relative "game/show_board"
-require_relative "game/get_guess"
+require_relative "game/user_guess"
 
 class Game
   def initialize
     dictionary = File.readlines("google-10000-english-no-swears.txt")
-    @hidden_word = dictionary[rand(1..10000)].chomp.chars
+    @hidden_word = dictionary[rand(1..9894)].chomp.chars
     @guess_word = hidden_word.map {|i| i = " _ "}
     @guessed_letters = []
     @wrong_guesses = 0
@@ -17,5 +17,5 @@ class Game
   attr_accessor :hidden_word, :guess_word, :guessed_letters, :wrong_guesses, :hangman
 
   include ShowBoard
-  include GetGuess
+  include UserGuess
 end
