@@ -11,5 +11,19 @@ module GetGuess
      end
     end
     puts guess
+
+    if hidden_word.include?(guess)
+      for i in 0..hidden_word.length
+        if hidden_word[i] == guess
+          guess_word[i] = guess
+        end
+      end
+      puts guess_word.join
+    else
+      self.wrong_guesses += 1
+      p wrong_guesses
+      puts "\nSorry, the hidden word does not include letter #{guess}!"
+    end
+    show_board
   end
 end
