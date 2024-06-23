@@ -7,7 +7,7 @@ class Game
     @guess_word
     @guessed_letters = []
     @wrong_guesses = 0
-    @hangman = ["O", "|", "/", "\\", "/", "\\"]
+    @hangman = [" ", " ", " ", " ", " ", " "]
     puts hidden_word
     show_board
   end
