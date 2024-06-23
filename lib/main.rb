@@ -13,6 +13,8 @@ require_relative "main/game"
 
 test = Game.new
 
+test.get_guess
+
 # board = "\
 # \n +---+\
 # \n |   |\

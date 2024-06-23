@@ -1,4 +1,5 @@
 require_relative "game/show_board"
+require_relative "game/get_guess"
 
 class Game
   def initialize
@@ -12,7 +13,9 @@ class Game
     p guess_word
     show_board
   end
+
   attr_accessor :hidden_word, :guess_word, :guessed_letters, :wrong_guesses, :hangman
 
   include ShowBoard
+  include GetGuess
 end
