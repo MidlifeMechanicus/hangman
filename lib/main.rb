@@ -2,18 +2,18 @@ require_relative "main/game"
 require "yaml"
 
 # def save_game(game)
-  # File.open("saved_game.yml", "w"){|file| file.write(game.to_yaml)}
+# File.open("saved_game.yml", "w"){|file| file.write(game.to_yaml)}
 # end
 
 def load_game
-  loaded_game = YAML.load(File.read("saved_game.yml"))
+  loaded_game = YAML.load_file("saved_game.yml")
   p loaded_game
 end
 
 if File.exist?("saved_game.yml")
   valid_game_choice = false
 
-  while valid_game_choice == false do
+  while valid_game_choice == false
     puts "\nYou have a saved game. \nWould you like to continue or start a new game?\nPlease enter 'new' or 'continue'."
     game_choice = gets.chomp.downcase
     if game_choice == "new"

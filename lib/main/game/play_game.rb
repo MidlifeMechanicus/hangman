@@ -1,10 +1,8 @@
 module PlayGame
   def play_game
-    while self.wrong_guesses < 6 do
-      self.user_guess
-      if guess_word == hidden_word
-        break
-      end
+    while wrong_guesses < 6
+      user_guess
+      break if guess_word == hidden_word
     end
     if guess_word == hidden_word
       puts "\nCongratulations! You win!"

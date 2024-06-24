@@ -8,7 +8,7 @@ class Game
   def initialize
     dictionary = File.readlines("google-10000-english-no-swears.txt")
     @hidden_word = dictionary[rand(1..9894)].chomp.chars
-    @guess_word = hidden_word.map {|i| i = " _ "}
+    @guess_word = hidden_word.map { |_i| i = " _ " }
     @guessed_letters = []
     @wrong_guesses = 0
     @hangman = [" ", " ", " ", " ", " ", " "]

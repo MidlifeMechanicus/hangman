@@ -1,5 +1,5 @@
 module SaveGame
   def save_game
-    File.open("saved_game.yml", "w"){|file| file.write(self.to_yaml)}
+    File.write("saved_game.yml", to_yaml)
   end
 end

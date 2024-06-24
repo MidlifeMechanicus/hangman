@@ -2,25 +2,23 @@ module UserGuess
   def user_guess
     guess_valid = false
     while guess_valid == false
-     puts "\nPlease enter the letter you wish to guess.\
+      puts "\nPlease enter the letter you wish to guess.\
      \nAlternatively, enter 'save' to save this game.\
      \nWARNING: Saving this game will overwrite previously saved games!"
-     guess = gets.chomp.downcase
-     if guess == "save"
-      save_game
-      puts "\nThis game has been saved."
-     elsif guess.length == 1 && guess.count("a-z") > 0
-      guess_valid = true
-     else
-      puts "\nThat is not a valid selection."
-     end
+      guess = gets.chomp.downcase
+      if guess == "save"
+        save_game
+        puts "\nThis game has been saved."
+      elsif guess.length == 1 && guess.count("a-z") > 0
+        guess_valid = true
+      else
+        puts "\nThat is not a valid selection."
+      end
     end
 
     if hidden_word.include?(guess)
       for i in 0..hidden_word.length
-        if hidden_word[i] == guess
-          guess_word[i] = guess
-        end
+        guess_word[i] = guess if hidden_word[i] == guess
       end
     else
       guessed_letters << guess
