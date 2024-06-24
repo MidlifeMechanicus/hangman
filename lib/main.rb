@@ -1,11 +1,10 @@
 require_relative "main/game"
 
 # game is object - everything must be stored in the objec so that it can be saved
-# show game-board
-# get guesses
-# check guss array v word array
-# valid input filter (length, alpha char, downcase)
 # save/load game
+# check win or loss
+# play game over multiple rounds until win or loss
+
 
 # dictionary = File.readlines("google-10000-english-no-swears.txt")
 # 
@@ -13,29 +12,4 @@ require_relative "main/game"
 
 test = Game.new
  
-test.user_guess
-
-# board = "\
-# \n +---+\
-# \n |   |\
-# \n |    \
-# \n |    \
-# \n |    \
-# \n |    \
-# \n========"
-
-# puts board
-
-# board = <<END
-#   +---+
-#   |   |
-#   |    
-#   |    
-#   |    
-#   |    
-#  ========
-# END
-
-# puts board
-
-# puts "this is a \\ test string"
+test.play_game

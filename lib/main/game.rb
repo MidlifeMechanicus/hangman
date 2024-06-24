@@ -1,5 +1,6 @@
 require_relative "game/show_board"
 require_relative "game/user_guess"
+require_relative "game/play_game"
 
 class Game
   def initialize
@@ -18,4 +19,5 @@ class Game
 
   include ShowBoard
   include UserGuess
+  include PlayGame
 end
