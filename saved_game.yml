@@ -1,10 +1,10 @@
 --- !ruby/object:Game
 hidden_word:
-- c
-- a
-- s
+- r
+- e
+- v
 guess_word:
-- c
+- " _ "
 - " _ "
 - " _ "
 guessed_letters: []
