@@ -28,6 +28,7 @@ if File.exist?("saved_game.yml")
         "saved_game.yml",
         permitted_classes: [Game, Symbol]
       )
+      loaded_game.show_board
       loaded_game.play_game
     else
       puts "That is not a valid selection. Please try again."

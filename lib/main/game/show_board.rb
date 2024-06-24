@@ -28,5 +28,6 @@ END
 # ["O", "|", "/", "\\", "/", "\\"]
     puts board
     puts "\n#{guess_word.join}"
+    puts "\nLetters you have already tried: #{guessed_letters.join(", ")}"
   end
 end

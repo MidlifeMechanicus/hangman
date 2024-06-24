@@ -15,7 +15,6 @@ module UserGuess
       puts "\nThat is not a valid selection."
      end
     end
-    puts guess
 
     if hidden_word.include?(guess)
       for i in 0..hidden_word.length
@@ -23,10 +22,9 @@ module UserGuess
           guess_word[i] = guess
         end
       end
-      puts guess_word.join
     else
+      guessed_letters << guess
       self.wrong_guesses += 1
-      p self.wrong_guesses
       case wrong_guesses
       when 1
         hangman[0] = "O"

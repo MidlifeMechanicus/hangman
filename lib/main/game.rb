@@ -12,8 +12,6 @@ class Game
     @guessed_letters = []
     @wrong_guesses = 0
     @hangman = [" ", " ", " ", " ", " ", " "]
-    p hidden_word
-    p guess_word
     show_board
   end
 
