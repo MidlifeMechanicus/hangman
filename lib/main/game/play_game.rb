@@ -1,6 +1,7 @@
 module PlayGame
   def play_game
     while self.wrong_guesses < 6 do
+      save_game
       self.user_guess
       if guess_word == hidden_word
         break
