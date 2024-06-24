@@ -1,6 +1,7 @@
 require_relative "game/show_board"
 require_relative "game/user_guess"
 require_relative "game/play_game"
+require "yaml"
 
 class Game
   def initialize
@@ -17,6 +18,8 @@ class Game
 
   attr_accessor :hidden_word, :guess_word, :guessed_letters, :wrong_guesses, :hangman
 
+
+  # need serialise and deserilase modules
   include ShowBoard
   include UserGuess
   include PlayGame

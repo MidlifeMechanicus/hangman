@@ -1,0 +1,28 @@
+--- !ruby/object:Game
+hidden_word:
+- f
+- i
+- r
+- e
+- w
+- i
+- r
+- e
+guess_word:
+- " _ "
+- " _ "
+- " _ "
+- " _ "
+- " _ "
+- " _ "
+- " _ "
+- " _ "
+guessed_letters: []
+wrong_guesses: 0
+hangman:
+- " "
+- " "
+- " "
+- " "
+- " "
+- " "
